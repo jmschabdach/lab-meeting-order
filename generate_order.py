@@ -8,7 +8,17 @@ def main():
     # Parse the arguments
     args = parser.parse_args()
 
-    print(args)
+    # Read the names from the file
+    names = []
+    with open(args.file, 'r') as f:
+        names = f.read()
+
+    print(names)
+    # Shuffle the names
+    # Print the names
+    print("Presentation order is:")
+
+
 
 if __name__ == "__main__":
     main()
