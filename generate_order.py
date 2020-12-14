@@ -1,4 +1,5 @@
 import argparse
+import random
 
 def main():
     # Set up the command line argument parser
@@ -11,14 +12,18 @@ def main():
     # Read the names from the file
     names = []
     with open(args.file, 'r') as f:
-        names = f.read()
+        names = f.readlines()
 
-    print(names)
+    # Remove whitespace from each line
+    names = [n.strip() for n in names]
+
     # Shuffle the names
+    random.shuffle(names)
+
     # Print the names
     print("Presentation order is:")
-
-
+    for name in names:
+        print(name)
 
 if __name__ == "__main__":
     main()
