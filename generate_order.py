@@ -20,10 +20,14 @@ def main():
     # Shuffle the names
     random.shuffle(names)
 
+    print()
+    print("Quick round robin: what have you been working on, what are you planning to work on, and if you're stuck on anything, is there anything the rest of the lab can do to help?")
+
     # Print the names
     print("Presentation order is:")
     for name in names:
         print(name)
+
 
 if __name__ == "__main__":
     main()
